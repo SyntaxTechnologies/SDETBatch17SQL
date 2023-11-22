@@ -2,7 +2,7 @@ package org.example;
 
 import java.sql.*;
 
-public class Main {
+public class E1 {
     public static void main(String[] args) {
 
 /*
@@ -15,11 +15,14 @@ syntaxhrm_mysql => name of the database
         String dbURL="jdbc:mysql://3.239.253.255:3306/syntaxhrm_mysql";
         String userName="syntax_hrm";
         String password="syntaxhrm123";
-        // Helps us establish the connection
+
         try {
+            // Helps us establish the connection
            Connection connection= DriverManager.getConnection(dbURL,userName,password);
+           //helps us take the query on the db server execute it and bring the results back
             Statement statement=connection.createStatement();
             String query="select * from person";
+            // This method executes the query and returns the results back in the form of a resultSet
             ResultSet resultSet=statement.executeQuery(query);
             while (resultSet.next()){
                 String firstname=resultSet.getString("firstname");
