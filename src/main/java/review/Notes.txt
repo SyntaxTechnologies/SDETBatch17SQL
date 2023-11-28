@@ -1,0 +1,3 @@
+Ip address
+    is the address of a computer that is connected to the internet.
+Port number.
